@@ -1,48 +1,48 @@
 [
     {
         "id": 1,
-        "name": "hi",
+        "name": "Asus VivoBook 15 K513EA ",
         "img":"https://i.ibb.co/dWfvzzL/Asus.jpg",
-        "description": "nknk",
-        "price": "15000",
+        "description": "Asus VivoBook 15 K513EA laptop features Intel Core i5 11th generation processor, 15.6 inches full HD display, 8GB RAM, 512GB SSD storage, power-saving mode, an aerodynamic IceBlades fan built-in with lower noise, 65-watt power supply, and fingerprint sensor.",
+        "price": "৳ 69,500",
         "quantity": 2,
-        "supplier": "Microsoft"
+        "supplier": "Asus"
     },
     {
         "id": 2,
-        "name": "hi",
+        "name": "HP Elitebook x360 1030 G3",
         "img":"https://i.ibb.co/LSGz0ZC/HP-360.jpg",
-        "description": "nknk",
-        "price": "15000",
+        "description": "HP Elitebook has an Intel Core i5-8th generation processor, 8GB RAM, 512GB SSD internal storage, full-sized, spill-resistant HP premium collaboration Keyboard, 65-Watt USB Type-C AC adapter charger, 1 headphone/microphone combo, 1 HDMI port.",
+        "price": "৳ 48,000",
         "quantity": 2,
-        "supplier": "Microsoft"
+        "supplier": "HP"
     },
     {
         "id": 3,
-        "name": "hi",
+        "name": "Lenovo ThinkPad T460S ",
         "img":"https://i.ibb.co/nfF28Hv/Lenovo-T460.jpg",
-        "description": "nknk",
-        "price": "15000",
+        "description": "Lenovo ThinkPad has Intel Core i5 6th generation processor, 8GB RAM, 256GB SSD storage capacity, Intel dual-band wireless-AC 8260 WIFI, base frequency 2.30 GHz, 4 GT/s bus speed.",
+        "price": "৳ 25,800",
         "quantity": 2,
-        "supplier": "Microsoft"
+        "supplier": "Lenovo"
     },
     {
         "id": 4,
-        "name": "hi",
+        "name": "HP EliteBook X360",
         "img":"https://i.ibb.co/ZYyBX5x/HP-X360.jpg",
-        "description": "nknk",
-        "price": "15000",
-        "quantity": 2,
-        "supplier": "Microsoft"
+        "description": "HP Elitebook X360 G2 laptop has Intel Core i5 7th generation processor, 8GB RAM, 256GB SSD storage. This laptop is Bluetooth 4.0 technology that lets you connect extra compatible peripherals, and also has a microSD card reader, a smart card reader, and a 720p webcam. The laptop can be rotated up to 360 degrees. It has 4 integrated stereo speakers, spill-resistant backlit keyboard.",
+        "price": "৳ 35,000",
+        "quantity": 12,
+        "supplier": "HP"
     },
     {
         "id": 5,
-        "name": "hi",
+        "name": "Acer Aspire E5-573",
         "img":"https://i.ibb.co/8DpJ9MZ/Acer-E5-573.jpg",
-        "description": "nknk",
-        "price": "15000",
+        "description": "Acer Aspire E5-573 laptop has Intel 5th generation core i5-5200U processor, 15.6 inch HD LED-backlit TFT screen, Intel HD graphics 5500, 4 GB RAM, 1 TB hard disk, DVD-writer, gigabit ethernet, wi-fi, Bluetooth, card reader, HD webcam, 2x USB 3.0 ports, 1x USB 2.0 port, HDMI port.",
+        "price": "৳ 17,499",
         "quantity": 2,
-        "supplier": "Microsoft"
+        "supplier": "Acar"
     },
     {
         "id": 6,
