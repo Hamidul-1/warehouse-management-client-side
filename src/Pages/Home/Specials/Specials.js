@@ -14,7 +14,7 @@ const specials = [
 const Specials = () => {
     return (
         <div className='container'>
-            <h2 className='text-primary text-center'>Special Arrival</h2>
+            <h2 className='text-primary text-center mt-5'>Special Arrival</h2>
             <div className="raw">
                 {
                     specials.map(special => <Special
