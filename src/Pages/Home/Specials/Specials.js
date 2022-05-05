@@ -14,8 +14,8 @@ const specials = [
 const Specials = () => {
     return (
         <div className='container'>
-            <h2 className='text-primary text-center mt-5'>Special Arrival</h2>
-            <div className="raw">
+            <h1 className='text-center mt-5'>Special Arrival</h1>
+            <div className="row">
                 {
                     specials.map(special => <Special
                         key={special.id}

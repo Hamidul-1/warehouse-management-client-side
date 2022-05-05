@@ -7,11 +7,11 @@ const Item = ({item}) => {
         <div className='item'>
             <img className='w-100' src={img} alt="" />
             <h2>Service: {name}</h2>
-            <p>Price: {price}</p>
+            <p><b>Price: {price}</b></p>
             <p><small>{description}</small></p>
-            <p><small>{quantity}</small></p>
-            <p><small>{supplier}</small></p>
-            <button>Stock Update {name}</button>
+            <p><small>Quantity: {quantity}</small></p>
+            <p><small>Supplier: {supplier}</small></p>
+            <button className='btn btn-success'>Stock Update {name}</button>
         </div>
     );
 };
