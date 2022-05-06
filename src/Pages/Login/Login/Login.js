@@ -1,13 +1,18 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -16,8 +21,14 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    if(user){
-        navigate('/home');
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     const handleSubmit = event => {
@@ -28,6 +39,18 @@ const Login = () => {
 
         /* signInWithEmailAndPassword(email, password); */
     }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            // toast('Sent email');
+        }
+        else{
+            // toast('please enter your email address');
+        }
+    }
+
 
     const navigateRegister = event => {
         navigate('/register');
@@ -52,17 +75,21 @@ const Login = () => {
                             <div className="form-group">
                                 <input ref={passwordRef} type="password" className="form-control mb-2" placeholder="password" required />
                             </div>
-                            <button type="submit" className="form-button button-l margin-b">Sign In</button>
+                            <button type="submit" className="form-button button-l margin-b">Login</button>
 
                             <a className="text-darkyellow" href="#"><small>Forgot your password?</small></a>
                             <p className="text-whitesmoke text-center"><small>Do not have an account?</small></p>
                             <a className="text-darkyellow" href="#"><small>Sign Up</small></a>
                         </form>
-                        <p>New to Laptop warehouse? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-
+                        {errorElement}
+                        <p>New to Laptop warehouse? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+                        
+                        <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
                         <p className="margin-t text-whitesmoke"><small> Md Hamidul Islam &copy; 2022</small> </p>
                     </div>
+                    <SocialLogin></SocialLogin>
                 </div>
+                
             </body>
         </div>
 
