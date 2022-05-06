@@ -14,7 +14,7 @@ const Items = () => {
     }, [])
 
     return (
-        <div className='container'>
+        <div id="items" className='container'>
             <div className="row">
                 <h2 className='items-title mt-5'>Inventory Items</h2>
                 <div className="items-container">

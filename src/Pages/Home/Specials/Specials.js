@@ -13,7 +13,7 @@ const specials = [
 
 const Specials = () => {
     return (
-        <div className='container'>
+        <div id="specials" className='container'>
             <h1 className='text-center mt-5'>Special Arrival</h1>
             <div className="row">
                 {
