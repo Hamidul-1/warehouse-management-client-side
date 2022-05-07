@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -22,6 +25,10 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
 
     if (user) {
         navigate(from, { replace: true });
@@ -44,10 +51,10 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            // toast('Sent email');
+            toast('Sent email');
         }
-        else{
-            // toast('please enter your email address');
+        else {
+            toast('please enter your email address');
         }
     }
 
@@ -77,19 +84,20 @@ const Login = () => {
                             </div>
                             <button type="submit" className="form-button button-l margin-b">Login</button>
 
-                            <a className="text-darkyellow" href="#"><small>Forgot your password?</small></a>
+                            {/* <a className="text-darkyellow" href="#"><small>Forgot your password?</small></a>
                             <p className="text-whitesmoke text-center"><small>Do not have an account?</small></p>
-                            <a className="text-darkyellow" href="#"><small>Sign Up</small></a>
+                            <a className="text-darkyellow" href="#"><small>Sign Up</small></a> */}
                         </form>
                         {errorElement}
                         <p>New to Laptop warehouse? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-                        
+
                         <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
                         <p className="margin-t text-whitesmoke"><small> Md Hamidul Islam &copy; 2022</small> </p>
                     </div>
                     <SocialLogin></SocialLogin>
+                    <ToastContainer/>
                 </div>
-                
+
             </body>
         </div>
 
