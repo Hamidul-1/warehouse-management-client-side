@@ -11,10 +11,10 @@ const Footer = () => {
                     <div class="footer-col">
                         <h4>company</h4>
                         <ul>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">our services</a></li>
-                            <li><a href="#">privacy policy</a></li>
-                            <li><a href="#">affiliate program</a></li>
+                            <li><a href="#">Prince Enterprise</a></li>
+                            <li><a href="#">Elephant Road</a></li>
+                            <li><a href="#">Dhaka</a></li>
+                            <li><a href="#">Bangladesh</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -28,12 +28,13 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h4>online shop</h4>
+                        <h4>about us</h4>
                         <ul>
-                            <li><a href="#">watch</a></li>
-                            <li><a href="#">bag</a></li>
-                            <li><a href="#">shoes</a></li>
-                            <li><a href="#">dress</a></li>
+                            <li><a href="#">Laptop Distributor</a></li>
+                            <li><a href="#">Proprietor: Md Hamidul Islam</a></li>
+                            <li><a href="#">Place: Elephant Road,Dhaka</a></li>
+                            <li><a href="#">Mobile: 01703047634</a></li>
+                            
                         </ul>
                     </div>
                     <div class="footer-col">
