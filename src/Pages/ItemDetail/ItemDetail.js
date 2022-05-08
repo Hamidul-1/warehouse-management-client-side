@@ -8,7 +8,7 @@ const ItemDetail = () => {
     const [itemDetails, setProductDetail] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/item/${itemId}`;
+        const url = `https://immense-ridge-40587.herokuapp.com/item/${itemId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -17,7 +17,7 @@ const ItemDetail = () => {
     }, [])
 
     const handleDelivered = () => {
-        fetch(`http://localhost:5000/item/decrease/${itemId}`, {
+        fetch(`https://immense-ridge-40587.herokuapp.com/item/decrease/${itemId}`, {
             method: 'PUT',
 
         })
@@ -30,7 +30,7 @@ const ItemDetail = () => {
     const addQuantity = event => {
         event.preventDefault();
         const input = event.target.reStore.value;
-        fetch(`http://localhost:5000/item/increase/${itemId}`, {
+        fetch(`https://immense-ridge-40587.herokuapp.com/item/increase/${itemId}`, {
             method: 'PUT',
             headers: {
 

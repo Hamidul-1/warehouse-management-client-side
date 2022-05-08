@@ -1,6 +1,13 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# App Name - Laptop Warehouse
+# Live site link- (https://laptop-warehouse-37066.web.app/)
+* This is a Math Tutor react app
+* It is a individual side who provides services
+* Its special feature is Email-password based authentication. where I use react firebase hook.
+* Also, implement Google login
+* Its a user-friendly and responsive website
 
 ## Available Scripts
 

@@ -9,7 +9,7 @@ const AddService = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/item`;
+        const url = `https://immense-ridge-40587.herokuapp.com/item`;
         fetch(url, {
             method: 'POST',
             headers: {

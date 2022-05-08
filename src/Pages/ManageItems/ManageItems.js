@@ -15,7 +15,7 @@ const ManageItems = () => {
         navigate(`/item/${productId}`)
     }
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://immense-ridge-40587.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setItems(data))
 
@@ -25,7 +25,7 @@ const ManageItems = () => {
         const proceed = window.confirm('Are you sure yo want to delete?')
         if (proceed) {
             console.log('delete item', id)
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://immense-ridge-40587.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
