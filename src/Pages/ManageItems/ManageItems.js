@@ -43,14 +43,14 @@ const ManageItems = () => {
     return (
         <div className='container my-5'>
 
-            <h2 className='text-center text-secondary mb-3 text-uppercase text-success'>Inventory Statement</h2>
+            <h2 className='text-center text-secondary mb-3 text-uppercase text-success'>Manage Inventories</h2>
             <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
 
             <table className=''>
 
                 <thead>
 
-                    <tr className='bg-custom text-light'>
+                    <tr className='bg-custom'>
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Supplier</th>

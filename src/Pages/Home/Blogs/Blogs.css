@@ -1,0 +1,38 @@
+.blog-1 {
+    text-align: left;
+    width: 87%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px gray;
+    border-left: 7px solid;
+    border-image: linear-gradient(blue, cyan);
+    border-image-slice: 1;
+}
+
+.blog-2 {
+    text-align: left;
+    width: 87%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px gray;
+    border-left: 7px solid;
+    border-image: linear-gradient(blue, cyan);
+    border-image-slice: 1;
+}
+
+.blog-3 {
+    text-align: left;
+    width: 87%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px gray;
+    border-left: 7px solid;
+    border-image: linear-gradient(blue, cyan);
+    border-image-slice: 1;
+}

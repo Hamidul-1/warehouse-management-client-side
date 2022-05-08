@@ -46,19 +46,13 @@ const ItemDetail = () => {
 
 
     const handleManageInventory = () => {
-        navigate(`/item`)
+        navigate(`/manage`)
     }
 
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true)
-
-    /* const handleReStore = event => {
-        event.preventDefault();
-        const reStore = event.target.reStore.value;
-        console.log(reStore)
-    } */
 
     return (
         <div className='container mx-auto w-50 my-5'>
