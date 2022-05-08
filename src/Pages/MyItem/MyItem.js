@@ -1,25 +1,36 @@
-
 import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import './ManageItems.css';
+import auth from '../../firebase.init';
+import './MyItem.css';
 
-const ManageItems = () => {
-    const [items, setItems] = useState([])
-
+const MyItem = () => {
+    const [items, setItems] = useState([]);
+    const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
     const handleUpdate = productId => {
         navigate(`/item/${productId}`)
     }
-    useEffect(() => {
-        fetch('http://localhost:5000/item')
-            .then(res => res.json())
-            .then(data => setItems(data))
 
-    }, [])
+    useEffect(() => {
+
+        const getNewInventory = async () => {
+            const email = user.email;
+            const url = `http://localhost:5000/myitem?email=${email}`;
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
+            setItems(data)
+        }
+        getNewInventory()
+
+    }, [user]);
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure yo want to delete?')
@@ -39,12 +50,10 @@ const ManageItems = () => {
         }
     }
 
-    const handleAddItem = () => {
-        navigate('/addservice')
-    }
 
     return (
-        <div className='container my-5'>
+
+        < div className='container my-5' >
 
             <h2 className='text-center text-secondary mb-3 text-uppercase text-success'>Manage Inventories</h2>
             <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
@@ -59,7 +68,6 @@ const ManageItems = () => {
                         <th scope="col">Supplier</th>
                         <th scope="col">Quantity</th>
                         <th>Action</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -81,10 +89,9 @@ const ManageItems = () => {
                 </tbody>
 
             </table>
+        </div >
 
-            <Button onClick={() => handleAddItem()} variant="outline-success mx-auto d-block mt-4 mb-5">Add New Item</Button>
-        </div>
     );
 };
 
-export default ManageItems;
+export default MyItem;

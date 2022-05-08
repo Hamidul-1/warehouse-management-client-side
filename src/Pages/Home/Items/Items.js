@@ -16,10 +16,11 @@ const Items = () => {
     return (
         <div id="items" className='container'>
             <div className="row">
-                <h2 className='items-title mt-5'>Manage Items</h2>
+            <h1 className='mt-3 mb-2 text-center text-uppercase text-success'>Manage Item</h1>
+            <hr style={{ width: '40%', margin: '0  auto' }} className='mb-4' />
                 <div className="items-container">
                     {
-                        items.map(item => <Item
+                        items.slice(0,6).map(item => <Item
                             key={item._id}
                             item={item}
                         >
