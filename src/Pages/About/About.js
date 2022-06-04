@@ -6,7 +6,7 @@ const About = () => {
         <div>
             {/* About Section */}
         <div className='container'>
-            <h1 className='services-title mt-3 mb-2 text-center'>About </h1>
+            <h1 className='services-title mt-3 mb-2 text-center'>About Me</h1>
             <hr style={{ width: '35%', margin: '0  auto' }} className='mb-4' />
             <div className='row my-5 align-items-center shadow-lg p-3 mb-5 about rounded'>
                 <h2 className='about-me-title text-center'>About Me</h2>
